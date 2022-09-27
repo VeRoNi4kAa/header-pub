@@ -51,13 +51,6 @@
 
 }
 
-.header-menu__logo {
-	display: flex;
-	align-items: center;
-	margin-right: auto;
-	
-}
-
 .menu-logo__logo {
 	width: 24px;
 	height: 24px;
@@ -82,17 +75,6 @@
 	
 }
 
-.header-menu__logo:hover,
-.header-menu__logo:focus {
-	.logo-text__animation {
-		opacity: 0.1;
-		animation-name: glowing;
-		animation-duration: 500ms;
-		animation-iteration-count: infinite;
-	}
-}
-
-
 .menu-logo__text {
 	display: contents;
 
@@ -110,11 +92,10 @@
 	display: flex;
 }
 
-.menu-nav__link {
-	&:not(:last-child) {
+.menu-nav__link :not(:last-child) {
 		margin-right: 39px;
 	}
-}
+
 
 .nav-link__item {
 	position: relative;
@@ -127,19 +108,17 @@
 	cursor: pointer;
 }
 
-.current {
-	&::after {
-		content: "";
-		position: absolute;
-		bottom: 0px;
-		left: 0;
-		height: 3px;
-		width: 100%;
-		background-color: var(--third-red-text-color);
-		border-radius: 2px;
-		transition: background-color, opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-	}
-}
+.current ::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: var(--third-red-text-color);
+    border-radius: 2px;
+    transition: background-color, opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
 .header-search {
 	position: relative;
@@ -155,14 +134,14 @@
 	background: none;
 	outline: none;
 	color: var(--secondary-white-text-color);
-
-	&:focus {
+}
+.search-input:focus {
 		border-bottom: 0.5px solid var(--secondary-white-text-color);
-
-		&::placeholder {
+}
+.search-input::placeholder {
 			color: var(--secondary-white-text-color)
 		}
-	}
+	
 
 	@media screen and (max-width: 767px) {
 		width: 100%;
@@ -173,7 +152,7 @@
 	@media screen and (min-width: 1280px) {
 		width: 394px;
 	}
-}
+
 
 .search-input::placeholder {
 	color: gray;
@@ -186,9 +165,9 @@
 	fill: gray;
 	right: 0;
 	top: 0;
-
-	&:hover,
-	&:focus {
+}
+.search-icon:hover,
+.search-icon:focus {
 		cursor: pointer;
 	}
 
@@ -222,14 +201,13 @@
 	transition: box-shadow 250ms linear, 
 	            background-color 250ms linear;
     cursor: pointer;
+}
 
-
-	&:hover, 
-	&:focus{
+.library-button:hover, 
+.library-button:focus{
 		background-color: #E85303;
 		box-shadow: 0px 0px 7px 1px rgba(255, 255, 255, 0.53)
 		;
-	}
 
 	@media (min-width: 768px) {
 		min-width: 152px;
@@ -242,7 +220,6 @@
 		padding: 13px 13px;
 	}
 }
-
 .library-first {
 	margin-right: 20px;
 
