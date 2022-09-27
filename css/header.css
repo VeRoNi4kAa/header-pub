@@ -1,22 +1,22 @@
 .header {
 	padding-top: 40px;
 	padding-bottom: 92px;
-	background: url("../images/header-bg-phone.jpg") 0 0/ 100% 100% no-repeat;
+	background: url("src\image\header2-mob.jpg") 0 0/ 100% 100% no-repeat;
 	font-family: "Roboto", sans-serif;
 
 	@media (min-width: 1280px) {
 		padding-bottom: 84px;
-		background-image: url("../images/header-bg.jpg");
+		background-image: url("src\image\header2-desk.jpg");
 
 	}
 
 	@media (min-width: 768px) and (max-width: 1279px) {
 		padding-bottom: 84px;
-		background-image: url("");
+		background-image: url("src\image\header-tab.jpg");
 	}
 
 	@media (max-width: 767px) {
-		background-image: url("");
+		background-image: url("src\image\header-tab.jpg");
 
 	}
 }
@@ -139,10 +139,8 @@
 		border-bottom: 0.5px solid var(--secondary-white-text-color);
 }
 .search-input::placeholder {
-			color: var(--secondary-white-text-color)
-		}
+			color: var(--secondary-white-text-color);
 	
-
 	@media screen and (max-width: 767px) {
 		width: 100%;
 	}
@@ -152,7 +150,7 @@
 	@media screen and (min-width: 1280px) {
 		width: 394px;
 	}
-
+}
 
 .search-input::placeholder {
 	color: gray;
@@ -169,7 +167,7 @@
 .search-icon:hover,
 .search-icon:focus {
 		cursor: pointer;
-	}
+	
 
 	@media screen and (min-width: 768px) and (max-width: 1279px) {
 		right: 185px;
